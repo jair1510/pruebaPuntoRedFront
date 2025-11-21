@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import Navbar from "./Navbar";
 
 function TransactionsPage() {
     const [transactions, setTransactions] = useState([]);
@@ -26,11 +27,15 @@ function TransactionsPage() {
     }
 
     return (
-        <div className="flex justify-center items-start min-h-screen bg-gray-900 py-10">
-            <div className="bg-black shadow-lg rounded-xl p-6 w-full max-w-4xl">
+
+        <div className="min-h-screen bg-gray-900">
+            <Navbar />
+        <div className="flex justify-center items-start py-10 rounded-full border-white">
+
+            <div className=" shadow-lg rounded-xl p-6 w-full max-w-4xl ">
                 <h1 className="text-xl font-bold mb-4">Transactions</h1>
                 <table className="w-full text-sm text-left rtl:text-right text-body">
-                    <thead className="bg-black">
+                    <thead>
                     <tr>
                         <th className="p-3">ID</th>
                         <th className="p-3">Ticket</th>
@@ -53,6 +58,7 @@ function TransactionsPage() {
                     </tbody>
                 </table>
             </div>
+        </div>
         </div>
     );
 }

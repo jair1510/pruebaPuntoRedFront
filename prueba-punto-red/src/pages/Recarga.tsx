@@ -59,12 +59,12 @@ function Recarga() {
 
 
     return (
-
         <div className="min-h-screen bg-gray-900">
             <Navbar />
+        <div className="flex flex-col items-center justify-center px-4 mt-6">
             <form onSubmit={handleBuy}>
 
-                <div className="space-y-12 px-4 flex flex-col items-center justify-center">
+                <div className="space-y-12">
                     <div className="border rounded-xl p-8 border-white/10 pb-12">
                         <h2 className="text-base/7 font-semibold text-white">Hacer Recarga</h2>
                         <div className="flex flex-wrap items-center gap-x-6">
@@ -144,7 +144,7 @@ function Recarga() {
                     {errorMessage}
                 </div>
             )}
-
+        </div>
         </div>
     );
 }
